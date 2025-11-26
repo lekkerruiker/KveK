@@ -6,7 +6,7 @@
   <title>Kroniek van een Kampioenschap</title>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Roboto&display=swap" rel="stylesheet">
   <style>
-   :root {
+:root {
   --bg: #5bb3c6;
   --black: #000000;
   --white: #ffffff;
@@ -24,9 +24,15 @@ body {
 }
 
 header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* verticale centrering */
+  align-items: center;     /* horizontale centrering */
   text-align: center;
   padding: 3rem 1rem;
   background: linear-gradient(135deg, var(--black), #222);
+  min-height: 60vh;        /* header vult minimaal 60% van het scherm */
+  box-sizing: border-box;
 }
 
 header img {
@@ -170,6 +176,7 @@ footer {
 @media (max-width: 600px) {
   header {
     padding: 2rem 1rem;
+    min-height: 50vh;
   }
 
   header img {
@@ -178,15 +185,18 @@ footer {
   }
 
   h1 {
-    font-size: 2rem;
+    font-size: 6vw; /* dynamische grootte */
+    line-height: 1.2;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
   }
 
   .subtitle {
-    font-size: 1rem;
+    font-size: 4vw;
   }
 
   .bio {
-    font-size: 0.9rem;
+    font-size: 3.5vw;
     padding: 0.8rem 1rem;
     max-width: 90%;
   }
