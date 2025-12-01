@@ -60,26 +60,6 @@ h1 { margin-top: 1rem; font-size: 3rem; font-family: 'Montserrat', sans-serif; f
 
 .feeds { display: flex; flex-direction: column; gap: 1rem; align-items: center; margin-bottom: 1.5rem; }
 
-.feeds a {
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
-  justify-content: center;
-  background: var(--white);
-  color: var(--black);
-  width: 300px;
-  max-width: 90%;
-  padding: 1.5rem;
-  border-radius: 12px;
-  text-decoration: none;
-  font-weight: bold;
-  font-size: 1.2rem;
-  transition: transform 0.2s, background 0.2s;
-}
-
-.feeds a img { width: auto; height: 32px; max-width: 32px; }
-.feeds a:hover { transform: translateY(-3px); background: var(--hover-green); color: var(--white); }
-
 .contact-button { display:inline-block; padding:1.5rem 2rem; background:var(--purple); color:var(--white); border-radius:8px; text-decoration:none; font-weight:bold; font-size:1.2rem; transition: background 0.3s, transform 0.3s; }
 .contact-button:hover { background: var(--hover-green); transform: translateY(-2px); }
 
@@ -110,6 +90,7 @@ footer { text-align: center; padding: 2rem 1rem; background: var(--black); color
 .vocasa-button:hover { background: var(--hover-purple); transform: translateY(-3px); }
 .vocasa-button i { color: #000000; }
 
+/* Social buttons */
 .platforms {
   display: flex;
   gap: 0.5rem;
@@ -134,7 +115,7 @@ footer { text-align: center; padding: 2rem 1rem; background: var(--black); color
   height: 24px;
 }
 
-.platforms a:hover { transform: translateY(-2px); background: var(--hover-green); }
+.platforms a:hover { transform: translateY(-2px); }
 
 @media (max-width: 600px) {
   header { padding: 2rem 1rem; min-height: 50vh; }
@@ -196,7 +177,7 @@ footer { text-align: center; padding: 2rem 1rem; background: var(--black); color
       <i class="fas fa-volleyball-ball"></i> Nevobo
     </a>
     <a href="https://probeersels.nevobo.nl/poulestatistieken/regio-oost-h2e-10" target="_blank" class="vocasa-button">
-      <i class="fas fa-chart-line"></i> Probeersel
+      <i class="fas fa-chart-line"></i> Probeersels
     </a>
   </div>
 </section>
