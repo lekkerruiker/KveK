@@ -55,7 +55,7 @@ h1 { margin-top: 1rem; font-size: 3rem; font-family: 'Montserrat', sans-serif; f
   margin: 3rem auto;
   background: var(--section-bg);
   border-radius: 12px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.2); /* subtiele schaduw voor diepte */
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
 }
 
 .feeds { display: flex; flex-direction: column; gap: 1rem; align-items: center; margin-bottom: 1.5rem; }
@@ -79,7 +79,7 @@ h1 { margin-top: 1rem; font-size: 3rem; font-family: 'Montserrat', sans-serif; f
 .feed-link i, .feed-link img { height: 32px; width: 32px; }
 .feed-link:hover { transform: translateY(-3px); background: var(--hover-green); color: var(--white); }
 
-.switch-button, .vocasa-button {
+.switch-button, .vocasa-button, .contact-button {
   font-size: 1.2rem;
   display: flex;
   align-items: center;
@@ -98,30 +98,15 @@ h1 { margin-top: 1rem; font-size: 3rem; font-family: 'Montserrat', sans-serif; f
 .switch-button:hover { background: var(--hover-green); transform: translateY(-3px); }
 .vocasa-button { background: var(--purple); }
 .vocasa-button:hover { background: var(--hover-purple); transform: translateY(-3px); }
+.contact-button { background: var(--purple); }
+.contact-button:hover { background: var(--hover-green); transform: translateY(-2px); }
 
-.switch-button i, .vocasa-button i { color: #ffffff; }
+.switch-button i, .vocasa-button i, .contact-button i { color: #ffffff; }
 
-.contact-button {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 300px;       /* zelfde breedte als feed-knoppen */
-  max-width: 90%;
-  padding: 1.5rem 1.5rem;
-  background: var(--purple);
-  color: var(--white);
-  border-radius: 12px;
-  text-decoration: none;
-  font-weight: bold;
-  font-size: 1.2rem;
-  transition: background 0.3s, transform 0.3s;
-}
-
-.contact-button:hover {
-  background: var(--hover-green);
-  transform: translateY(-2px);
-}
-
+.platforms { display: flex; gap: 0.5rem; justify-content: center; flex-wrap: wrap; }
+.platforms a { display: flex; align-items: center; justify-content: center; width: 50px; height: 50px; border-radius: 10px; background: var(--white); text-decoration: none; transition: transform 0.2s, background 0.2s; }
+.platforms a img { width: 24px; height: 24px; }
+.platforms a:hover { transform: translateY(-2px); }
 
 @media (max-width: 600px) {
   header { padding: 2rem 1rem; min-height: 50vh; }
@@ -129,9 +114,8 @@ h1 { margin-top: 1rem; font-size: 3rem; font-family: 'Montserrat', sans-serif; f
   h1 { font-size: 6vw; line-height: 1.2; word-wrap: break-word; overflow-wrap: break-word; }
   .subtitle { font-size: 4vw; }
   .bio { font-size: 3.5vw; padding: 0.8rem 1rem; max-width: 90%; }
-  .feeds a, .switch-button, .vocasa-button, .feed-link { width: 90%; font-size: 1rem; padding: 1rem 1.2rem; }
-  .feeds a img, .switch-button i, .vocasa-button i, .feed-link i, .feed-link img { height: 24px; width: 24px; }
-  .contact-button { font-size: 1rem; padding: 1rem 1.5rem; }
+  .feeds a, .switch-button, .vocasa-button, .feed-link, .contact-button { width: 90%; font-size: 1rem; padding: 1rem 1.2rem; }
+  .feeds a img, .switch-button i, .vocasa-button i, .feed-link i, .feed-link img, .contact-button i { height: 24px; width: 24px; }
   .platforms a { width: 40px; height: 40px; }
   .platforms a img { width: 20px; height: 20px; }
 }
@@ -190,7 +174,11 @@ h1 { margin-top: 1rem; font-size: 3rem; font-family: 'Montserrat', sans-serif; f
 
 <section class="section">
   <h2>Contact</h2>
-  <a href="mailto:kroniekvaneenkampioenschap@gmail.com" class="contact-button">Mail ons</a>
+  <div class="feeds">
+    <a href="mailto:kroniekvaneenkampioenschap@gmail.com" class="contact-button">
+      Mail ons
+    </a>
+  </div>
 </section>
 
 <section class="section">
