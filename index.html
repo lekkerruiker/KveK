@@ -13,6 +13,7 @@
 <style>
 :root {
   --bg: #000000; /* zwart */
+  --section-bg: #5bb3c6; /* blauwgroen secties */
   --black: #000000;
   --white: #ffffff;
   --purple: #26175a;
@@ -52,9 +53,9 @@ h1 { margin-top: 1rem; font-size: 3rem; font-family: 'Montserrat', sans-serif; f
   padding: 2rem 1rem;
   max-width: 900px;
   margin: 3rem auto;
-  background: rgba(255, 255, 255, 0.05); /* subtiele contrast op zwart */
+  background: var(--section-bg);
   border-radius: 12px;
-  box-shadow: 0 4px 12px rgba(255,255,255,0.05); /* subtiele schaduw wit op zwart */
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2); /* subtiele schaduw voor diepte */
 }
 
 .feeds { display: flex; flex-direction: column; gap: 1rem; align-items: center; margin-bottom: 1.5rem; }
@@ -168,7 +169,7 @@ h1 { margin-top: 1rem; font-size: 3rem; font-family: 'Montserrat', sans-serif; f
       <i class="fas fa-volleyball-ball"></i> Nevobo
     </a>
     <a href="https://probeersels.nevobo.nl/poulestatistieken/regio-oost-h2e-10" target="_blank" class="vocasa-button">
-      <i class="fas fa-chart-line"></i> Probeersel
+      <i class="fas fa-chart-line"></i> Probeersels
     </a>
   </div>
 </section>
