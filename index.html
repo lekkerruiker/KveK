@@ -211,13 +211,19 @@ footer {
   transition: transform 0.2s, background 0.2s;
 }
 
-.switch-button { background: #1a7c4c; } /* groen */
+.switch-button { background: #1a7c4c; }
 .switch-button:hover { background: #0f5d36; transform: translateY(-3px); }
+.switch-button i { color: #ffffff; transition: transform 0.2s; }
 
-.vocasa-button { background: #26175a; } /* paars */
-.vocasa-button:hover { background: #1a1440; transform: translateY(-3px); }
+.vocasa-button { background: #26175a; }
+.vocasa-button:hover { background: #3b1f7f; transform: translateY(-3px); }
+.vocasa-button i { color: #ffffff; transition: transform 0.2s; }
 
-.switch-button i, .vocasa-button i { font-size: 1.5rem; }
+/* Animatie voor iconen */
+.switch-button:hover i,
+.vocasa-button:hover i {
+  transform: rotate(15deg) scale(1.2);
+}
 
 /* =====================
    Responsive
