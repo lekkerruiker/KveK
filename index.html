@@ -60,10 +60,26 @@ h1 { margin-top: 1rem; font-size: 3rem; font-family: 'Montserrat', sans-serif; f
 
 .feeds { display: flex; flex-direction: column; gap: 1rem; align-items: center; margin-bottom: 1.5rem; }
 
-.contact-button { display:inline-block; padding:1.5rem 2rem; background:var(--purple); color:var(--white); border-radius:8px; text-decoration:none; font-weight:bold; font-size:1.2rem; transition: background 0.3s, transform 0.3s; }
-.contact-button:hover { background: var(--hover-green); transform: translateY(-2px); }
+/* Podcast feed knoppen */
+.feed-link {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  justify-content: center;
+  background: var(--white);
+  color: var(--black);
+  width: 300px;
+  max-width: 90%;
+  padding: 1.5rem;
+  border-radius: 12px;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1.2rem;
+  transition: transform 0.2s, background 0.2s;
+}
 
-footer { text-align: center; padding: 2rem 1rem; background: var(--black); color: var(--white); margin-top: 2rem; }
+.feed-link i, .feed-link img { height: 32px; width: 32px; }
+.feed-link:hover { transform: translateY(-3px); background: var(--hover-green); color: var(--white); }
 
 /* Knoppen Switch en Vocasa */
 .switch-button, .vocasa-button {
@@ -89,6 +105,11 @@ footer { text-align: center; padding: 2rem 1rem; background: var(--black); color
 .vocasa-button { background: var(--purple); }
 .vocasa-button:hover { background: var(--hover-purple); transform: translateY(-3px); }
 .vocasa-button i { color: #000000; }
+
+.contact-button { display:inline-block; padding:1.5rem 2rem; background:var(--purple); color:var(--white); border-radius:8px; text-decoration:none; font-weight:bold; font-size:1.2rem; transition: background 0.3s, transform 0.3s; }
+.contact-button:hover { background: var(--hover-green); transform: translateY(-2px); }
+
+footer { text-align: center; padding: 2rem 1rem; background: var(--black); color: var(--white); margin-top: 2rem; }
 
 /* Social buttons */
 .platforms {
@@ -123,8 +144,8 @@ footer { text-align: center; padding: 2rem 1rem; background: var(--black); color
   h1 { font-size: 6vw; line-height: 1.2; word-wrap: break-word; overflow-wrap: break-word; }
   .subtitle { font-size: 4vw; }
   .bio { font-size: 3.5vw; padding: 0.8rem 1rem; max-width: 90%; }
-  .feeds a, .switch-button, .vocasa-button { width: 90%; font-size: 1rem; padding: 1rem 1.2rem; }
-  .feeds a img, .switch-button i, .vocasa-button i { height: 24px; max-width: 24px; }
+  .feeds a, .switch-button, .vocasa-button, .feed-link { width: 90%; font-size: 1rem; padding: 1rem 1.2rem; }
+  .feeds a img, .switch-button i, .vocasa-button i, .feed-link i, .feed-link img { height: 24px; width: 24px; }
   .contact-button { font-size: 1rem; padding: 1rem 1.5rem; }
   .platforms a { width: 40px; height: 40px; }
   .platforms a img { width: 20px; height: 20px; }
@@ -146,13 +167,13 @@ footer { text-align: center; padding: 2rem 1rem; background: var(--black); color
 <section class="section">
   <h2>Feeds</h2>
   <div class="feeds">
-    <a href="https://podcasts.apple.com/be/podcast/kroniek-van-een-kampioenschap/id1437927489?l=nl" target="_blank">
+    <a href="https://podcasts.apple.com/be/podcast/kroniek-van-een-kampioenschap/id1437927489?l=nl" target="_blank" class="feed-link">
       <img src="https://cdn.simpleicons.org/applepodcasts/000000" alt="Apple Podcasts logo"> Apple Podcasts
     </a>
-    <a href="https://open.spotify.com/show/3rP4mEECqTnrvs5GOuVPFt" target="_blank">
+    <a href="https://open.spotify.com/show/3rP4mEECqTnrvs5GOuVPFt" target="_blank" class="feed-link">
       <img src="https://cdn.simpleicons.org/spotify/000000" alt="Spotify logo"> Spotify
     </a>
-    <a href="https://www.youtube.com/@KroniekvaneenKampioenschap/videos" target="_blank">
+    <a href="https://www.youtube.com/@KroniekvaneenKampioenschap/videos" target="_blank" class="feed-link">
       <img src="https://cdn.simpleicons.org/youtube/000000" alt="YouTube logo"> YouTube
     </a>
   </div>
