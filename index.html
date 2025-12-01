@@ -30,6 +30,8 @@
 
   <!-- Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Roboto&display=swap" rel="stylesheet">
+  <!-- Font Awesome voor iconen -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha512-Pwz8K...=" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
   <style>
 :root {
@@ -68,9 +70,7 @@ header img {
   transition: transform 0.3s ease;
 }
 
-header img:hover {
-  transform: scale(1.05);
-}
+header img:hover { transform: scale(1.05); }
 
 h1 {
   margin-top: 1rem;
@@ -98,11 +98,7 @@ h1 {
   line-height: 1.4;
 }
 
-.section {
-  padding: 2rem 1rem;
-  max-width: 900px;
-  margin: auto;
-}
+.section { padding: 2rem 1rem; max-width: 900px; margin: auto; }
 
 .feeds {
   display: flex;
@@ -186,10 +182,7 @@ h1 {
   transition: background 0.3s, transform 0.3s;
 }
 
-.contact-button:hover {
-  background: var(--hover-green);
-  transform: translateY(-2px);
-}
+.contact-button:hover { background: var(--hover-green); transform: translateY(-2px); }
 
 footer {
   text-align: center;
@@ -203,6 +196,7 @@ footer {
    Competitie buttons
 ===================== */
 .switch-button, .vocasa-button {
+  font-size: 1.2rem;
   display: flex;
   align-items: center;
   gap: 0.5rem;
@@ -213,7 +207,6 @@ footer {
   border-radius: 12px;
   text-decoration: none;
   font-weight: bold;
-  font-size: 1.2rem;
   color: #ffffff;
   transition: transform 0.2s, background 0.2s;
 }
@@ -224,39 +217,19 @@ footer {
 .vocasa-button { background: var(--purple); }
 .vocasa-button:hover { background: #1a1440; transform: translateY(-3px); }
 
-.switch-button img, .vocasa-button img {
-  width: auto;
-  height: 32px;
-  max-width: 32px;
-}
+.switch-button i, .vocasa-button i { font-size: 1.5rem; }
 
 /* =====================
    Responsive
 ===================== */
 @media (max-width: 600px) {
-  header {
-    padding: 2rem 1rem;
-    min-height: 50vh;
-  }
-
+  header { padding: 2rem 1rem; min-height: 50vh; }
   header img { max-width: 250px; }
-
   h1 { font-size: 6vw; line-height: 1.2; word-wrap: break-word; overflow-wrap: break-word; }
-
   .subtitle { font-size: 4vw; }
   .bio { font-size: 3.5vw; padding: 0.8rem 1rem; max-width: 90%; }
-
-  .feeds a, .switch-button, .vocasa-button {
-    width: 90%;
-    font-size: 1rem;
-    padding: 1rem 1.2rem;
-  }
-
-  .feeds a img, .platforms a img, .switch-button img, .vocasa-button img {
-    height: 24px;
-    max-width: 24px;
-  }
-
+  .feeds a, .switch-button, .vocasa-button { width: 90%; font-size: 1rem; padding: 1rem 1.2rem; }
+  .feeds a img, .platforms a img, .switch-button i, .vocasa-button i { height: 24px; max-width: 24px; }
   .platforms a { width: 60px; height: 60px; }
   .contact-button { font-size: 1rem; padding: 1rem 1.5rem; }
 }
@@ -299,24 +272,24 @@ footer {
   <h3>Switch</h3>
   <div class="feeds">
     <a href="https://www.volleybal.nl/competitie/vereniging/ckl9x5l/heren/3#ranking"
-       target="_blank" class="switch-button" title="Bekijk Switch op Nevobo">
-      <img src="https://cdn.simpleicons.org/nevobo/ffffff" alt="Nevobo logo"> Nevobo
+       target="_blank" class="switch-button">
+      <i class="fas fa-volleyball-ball"></i> Nevobo
     </a>
     <a href="https://probeersels.nevobo.nl/poulestatistieken/regio-west-h1i-4"
-       target="_blank" class="switch-button" title="Bekijk Switch op Probeersels">
-      <img src="https://cdn.simpleicons.org/probeersels/ffffff" alt="Probeersels logo"> Probeersels
+       target="_blank" class="switch-button">
+      <i class="fas fa-chart-line"></i> Probeersels
     </a>
   </div>
 
-  <h6>Vocasa</h6>
+  <h3>Vocasa</h3>
   <div class="feeds">
     <a href="https://www.volleybal.nl/competitie/vereniging/ckl9c8t/heren/6#ranking"
-       target="_blank" class="vocasa-button" title="Bekijk Vocasa op Nevobo">
-      <img src="https://cdn.simpleicons.org/nevobo/ffffff" alt="Nevobo logo"> Nevobo
+       target="_blank" class="vocasa-button">
+      <i class="fas fa-volleyball-ball"></i> Nevobo
     </a>
     <a href="https://probeersels.nevobo.nl/poulestatistieken/regio-oost-h2e-10"
-       target="_blank" class="vocasa-button" title="Bekijk Vocasa op Probeersel">
-      <img src="https://cdn.simpleicons.org/probeersels/ffffff" alt="Probeersel logo"> Probeersel
+       target="_blank" class="vocasa-button">
+      <i class="fas fa-chart-line"></i> Probeersel
     </a>
   </div>
 </section>
