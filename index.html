@@ -33,12 +33,12 @@
 
   <style>
 :root {
---bg: #5bb3c6;
---black: #000000;
---white: #ffffff;
---purple: #26175a;
---green: #1a7c4c;
---hover-green: #1a7c4c;
+  --bg: #5bb3c6;
+  --black: #000000;
+  --white: #ffffff;
+  --purple: #26175a;
+  --green: #1a7c4c;
+  --hover-green: #1a7c4c;
 }
 
 body {
@@ -62,8 +62,9 @@ header {
 }
 
 header img {
-  width: 350px;
-  max-width: 90%;
+  width: 100%;
+  max-width: 350px;
+  height: auto;
   transition: transform 0.3s ease;
 }
 
@@ -129,8 +130,9 @@ h1 {
 }
 
 .feeds a img {
+  width: auto;
   height: 32px;
-  width: 32px;
+  max-width: 32px;
 }
 
 .feeds a:hover {
@@ -161,8 +163,9 @@ h1 {
 }
 
 .platforms a img {
+  width: auto;
   height: 32px;
-  width: 32px;
+  max-width: 32px;
 }
 
 .platforms a:hover {
@@ -204,7 +207,6 @@ footer {
   }
 
   header img {
-    width: 80%;
     max-width: 250px;
   }
 
@@ -231,14 +233,15 @@ footer {
     padding: 1rem 1.2rem;
   }
 
+  .feeds a img,
+  .platforms a img {
+    height: 24px;
+    max-width: 24px;
+  }
+
   .platforms a {
     width: 60px;
     height: 60px;
-  }
-
-  .platforms a img {
-    height: 24px;
-    width: 24px;
   }
 
   .contact-button {
