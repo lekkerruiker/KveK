@@ -104,11 +104,37 @@ footer { text-align: center; padding: 2rem 1rem; background: var(--black); color
 
 .switch-button { background: var(--green); }
 .switch-button:hover { background: var(--hover-green); transform: translateY(-3px); }
-.switch-button i { color: #000000; } /* zwart icoon */
+.switch-button i { color: #000000; }
 
 .vocasa-button { background: var(--purple); }
 .vocasa-button:hover { background: var(--hover-purple); transform: translateY(-3px); }
-.vocasa-button i { color: #000000; } /* zwart icoon */
+.vocasa-button i { color: #000000; }
+
+.platforms {
+  display: flex;
+  gap: 0.5rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.platforms a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 50px;
+  height: 50px;
+  border-radius: 10px;
+  background: var(--white);
+  text-decoration: none;
+  transition: transform 0.2s, background 0.2s;
+}
+
+.platforms a img {
+  width: 24px;
+  height: 24px;
+}
+
+.platforms a:hover { transform: translateY(-2px); background: var(--hover-green); }
 
 @media (max-width: 600px) {
   header { padding: 2rem 1rem; min-height: 50vh; }
@@ -119,6 +145,8 @@ footer { text-align: center; padding: 2rem 1rem; background: var(--black); color
   .feeds a, .switch-button, .vocasa-button { width: 90%; font-size: 1rem; padding: 1rem 1.2rem; }
   .feeds a img, .switch-button i, .vocasa-button i { height: 24px; max-width: 24px; }
   .contact-button { font-size: 1rem; padding: 1rem 1.5rem; }
+  .platforms a { width: 40px; height: 40px; }
+  .platforms a img { width: 20px; height: 20px; }
 }
 </style>
 </head>
@@ -168,7 +196,7 @@ footer { text-align: center; padding: 2rem 1rem; background: var(--black); color
       <i class="fas fa-volleyball-ball"></i> Nevobo
     </a>
     <a href="https://probeersels.nevobo.nl/poulestatistieken/regio-oost-h2e-10" target="_blank" class="vocasa-button">
-      <i class="fas fa-chart-line"></i> Probeersels
+      <i class="fas fa-chart-line"></i> Probeersel
     </a>
   </div>
 </section>
