@@ -7,9 +7,7 @@
 <meta name="description" content="Kroniek van een Kampioenschap – de Nederlandse volleybalpodcast over Heren 1e Klasse I regio West en 2e Klasse E regio Oost. Beluister ons via Spotify, Apple Podcasts en YouTube.">
 <meta name="robots" content="index, follow">
 
-<!-- Fonts -->
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Roboto&display=swap" rel="stylesheet">
-<!-- Font Awesome voor iconen -->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
 <style>
@@ -43,13 +41,7 @@ header {
   box-sizing: border-box;
 }
 
-header img {
-  width: 100%;
-  max-width: 350px;
-  height: auto;
-  transition: transform 0.3s ease;
-}
-
+header img { width: 100%; max-width: 350px; height: auto; transition: transform 0.3s ease; }
 header img:hover { transform: scale(1.05); }
 
 h1 { margin-top: 1rem; font-size: 3rem; font-family: 'Montserrat', sans-serif; font-weight: 700; color: var(--white); }
@@ -77,7 +69,6 @@ h1 { margin-top: 1rem; font-size: 3rem; font-family: 'Montserrat', sans-serif; f
   font-size: 1.2rem;
   transition: transform 0.2s, background 0.2s;
 }
-
 .feed-link i, .feed-link img { height: 32px; width: 32px; }
 .feed-link:hover { transform: translateY(-3px); background: var(--hover-green); color: var(--white); }
 
@@ -97,14 +88,13 @@ h1 { margin-top: 1rem; font-size: 3rem; font-family: 'Montserrat', sans-serif; f
   color: #ffffff;
   transition: transform 0.2s, background 0.2s;
 }
-
 .switch-button { background: var(--green); }
 .switch-button:hover { background: var(--hover-green); transform: translateY(-3px); }
-.switch-button i { color: #000000; }
-
 .vocasa-button { background: var(--purple); }
 .vocasa-button:hover { background: var(--hover-purple); transform: translateY(-3px); }
-.vocasa-button i { color: #000000; }
+
+/* Zet iconen wit */
+.switch-button i, .vocasa-button i { color: #ffffff; }
 
 .contact-button { display:inline-block; padding:1.5rem 2rem; background:var(--purple); color:var(--white); border-radius:8px; text-decoration:none; font-weight:bold; font-size:1.2rem; transition: background 0.3s, transform 0.3s; }
 .contact-button:hover { background: var(--hover-green); transform: translateY(-2px); }
@@ -112,30 +102,9 @@ h1 { margin-top: 1rem; font-size: 3rem; font-family: 'Montserrat', sans-serif; f
 footer { text-align: center; padding: 2rem 1rem; background: var(--black); color: var(--white); margin-top: 2rem; }
 
 /* Social buttons */
-.platforms {
-  display: flex;
-  gap: 0.5rem;
-  justify-content: center;
-  flex-wrap: wrap;
-}
-
-.platforms a {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 50px;
-  height: 50px;
-  border-radius: 10px;
-  background: var(--white);
-  text-decoration: none;
-  transition: transform 0.2s, background 0.2s;
-}
-
-.platforms a img {
-  width: 24px;
-  height: 24px;
-}
-
+.platforms { display: flex; gap: 0.5rem; justify-content: center; flex-wrap: wrap; }
+.platforms a { display: flex; align-items: center; justify-content: center; width: 50px; height: 50px; border-radius: 10px; background: var(--white); text-decoration: none; transition: transform 0.2s, background 0.2s; }
+.platforms a img { width: 24px; height: 24px; }
 .platforms a:hover { transform: translateY(-2px); }
 
 @media (max-width: 600px) {
