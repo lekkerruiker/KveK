@@ -12,8 +12,8 @@
 
 <style>
 :root {
-  --bg: #000000; /* zwart */
-  --section-bg: #5bb3c6; /* blauwgroen secties */
+  --bg: #000000;
+  --section-bg: #5bb3c6;
   --black: #000000;
   --white: #ffffff;
   --purple: #26175a;
@@ -56,6 +56,14 @@ h1 { margin-top: 1rem; font-size: 3rem; font-family: 'Montserrat', sans-serif; f
   background: var(--section-bg);
   border-radius: 12px;
   box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.8s ease-out;
+}
+
+.section.visible {
+  opacity: 1;
+  transform: translateY(0);
 }
 
 .feeds { display: flex; flex-direction: column; gap: 1rem; align-items: center; margin-bottom: 1.5rem; }
@@ -167,7 +175,7 @@ h1 { margin-top: 1rem; font-size: 3rem; font-family: 'Montserrat', sans-serif; f
       <i class="fas fa-volleyball-ball"></i> Nevobo
     </a>
     <a href="https://probeersels.nevobo.nl/poulestatistieken/regio-oost-h2e-10" target="_blank" class="vocasa-button">
-      <i class="fas fa-chart-line"></i> Probeersels
+      <i class="fas fa-chart-line"></i> Probeersel
     </a>
   </div>
 </section>
@@ -199,6 +207,21 @@ h1 { margin-top: 1rem; font-size: 3rem; font-family: 'Montserrat', sans-serif; f
 <footer>
   <p>© 2025 Kroniek van een Kampioenschap</p>
 </footer>
+
+<script>
+// Fade-in effect voor secties
+const sections = document.querySelectorAll('.section');
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if(entry.isIntersecting){
+      entry.target.classList.add('visible');
+      observer.unobserve(entry.target);
+    }
+  });
+},{ threshold: 0.2 });
+
+sections.forEach(section => observer.observe(section));
+</script>
 
 </body>
 </html>
