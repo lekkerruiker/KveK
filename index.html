@@ -1,46 +1,26 @@
 <!DOCTYPE html>
 <html lang="nl">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Kroniek van een Kampioenschap – Nederlandse volleybalpodcast</title>
+<meta name="description" content="Kroniek van een Kampioenschap – de Nederlandse volleybalpodcast over Heren 1e Klasse I regio West en 2e Klasse E regio Oost. Beluister ons via Spotify, Apple Podcasts en YouTube.">
+<meta name="robots" content="index, follow">
 
-  <title>Kroniek van een Kampioenschap – Nederlandse volleybalpodcast</title>
-  <meta name="description" content="Kroniek van een Kampioenschap – de Nederlandse volleybalpodcast over Heren 1e Klasse I regio West en 2e Klasse E regio Oost. Beluister ons via Spotify, Apple Podcasts en YouTube.">
-  <meta name="robots" content="index, follow">
+<!-- Fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Roboto&display=swap" rel="stylesheet">
+<!-- Font Awesome voor iconen -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
-  <!-- Structured Data voor Google Rich Results -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "PodcastSeries",
-    "name": "Kroniek van een Kampioenschap",
-    "url": "https://www.kroniekvaneenkampioenschap.nl/",
-    "description": "Nederlandse volleybalpodcast over Heren 1e Klasse I regio West en 2e Klasse E regio Oost.",
-    "inLanguage": "nl-NL",
-    "publisher": {
-      "@type": "Organization",
-      "name": "Kroniek van een Kampioenschap",
-      "logo": {
-        "@type": "ImageObject",
-        "url": "https://archive.org/download/logo2_1400/logo2_1400.png"
-      }
-    }
-  }
-  </script>
-
-  <!-- Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Roboto&display=swap" rel="stylesheet">
-  <!-- Font Awesome voor iconen -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
-
-  <style>
+<style>
 :root {
   --bg: #5bb3c6;
   --black: #000000;
   --white: #ffffff;
   --purple: #26175a;
   --green: #1a7c4c;
-  --hover-green: #1a7c4c;
+  --hover-green: #0f5d36;
+  --hover-purple: #3b1f7f;
 }
 
 body {
@@ -72,41 +52,13 @@ header img {
 
 header img:hover { transform: scale(1.05); }
 
-h1 {
-  margin-top: 1rem;
-  font-size: 3rem;
-  font-family: 'Montserrat', sans-serif;
-  font-weight: 700;
-  color: var(--white);
-}
-
-.subtitle {
-  margin-top: 0.5rem;
-  font-size: 1.2rem;
-  color: var(--white);
-}
-
-.bio {
-  margin-top: 1rem;
-  font-size: 1rem;
-  color: var(--white);
-  background: rgba(0,0,0,0.2);
-  display: inline-block;
-  padding: 1rem 1.5rem;
-  border-radius: 8px;
-  max-width: 700px;
-  line-height: 1.4;
-}
+h1 { margin-top: 1rem; font-size: 3rem; font-family: 'Montserrat', sans-serif; font-weight: 700; color: var(--white); }
+.subtitle { margin-top: 0.5rem; font-size: 1.2rem; color: var(--white); }
+.bio { margin-top: 1rem; font-size: 1rem; color: var(--white); background: rgba(0,0,0,0.2); display: inline-block; padding: 1rem 1.5rem; border-radius: 8px; max-width: 700px; line-height: 1.4; }
 
 .section { padding: 2rem 1rem; max-width: 900px; margin: auto; }
 
-.feeds {
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
-  align-items: center;
-  margin-bottom: 1.5rem;
-}
+.feeds { display: flex; flex-direction: column; gap: 1rem; align-items: center; margin-bottom: 1.5rem; }
 
 .feeds a {
   display: flex;
@@ -125,76 +77,14 @@ h1 {
   transition: transform 0.2s, background 0.2s;
 }
 
-.feeds a img {
-  width: auto;
-  height: 32px;
-  max-width: 32px;
-}
+.feeds a img { width: auto; height: 32px; max-width: 32px; }
+.feeds a:hover { transform: translateY(-3px); background: var(--hover-green); color: var(--white); }
 
-.feeds a:hover {
-  transform: translateY(-3px);
-  background: var(--hover-green);
-  color: var(--white);
-}
-
-.platforms {
-  display: flex;
-  gap: 1rem;
-  justify-content: center;
-  flex-wrap: wrap;
-}
-
-.platforms a {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background: var(--white);
-  color: var(--black);
-  width: 80px;
-  height: 80px;
-  border-radius: 12px;
-  text-decoration: none;
-  font-weight: bold;
-  transition: transform 0.2s, background 0.2s;
-}
-
-.platforms a img {
-  width: auto;
-  height: 32px;
-  max-width: 32px;
-}
-
-.platforms a:hover {
-  transform: translateY(-3px);
-  background: var(--hover-green);
-  color: var(--white);
-}
-
-.contact-button {
-  display:inline-block;
-  padding:1.5rem 2rem;
-  background:var(--purple);
-  color:var(--white);
-  border-radius:8px;
-  text-decoration:none;
-  font-weight:bold;
-  font-size:1.2rem;
-  transition: background 0.3s, transform 0.3s;
-}
-
+.contact-button { display:inline-block; padding:1.5rem 2rem; background:var(--purple); color:var(--white); border-radius:8px; text-decoration:none; font-weight:bold; font-size:1.2rem; transition: background 0.3s, transform 0.3s; }
 .contact-button:hover { background: var(--hover-green); transform: translateY(-2px); }
 
-footer {
-  text-align: center;
-  padding: 2rem 1rem;
-  background: var(--black);
-  color: var(--white);
-  margin-top: 2rem;
-}
+footer { text-align: center; padding: 2rem 1rem; background: var(--black); color: var(--white); margin-top: 2rem; }
 
-/* =====================
-   Competitie buttons
-===================== */
 .switch-button, .vocasa-button {
   font-size: 1.2rem;
   display: flex;
@@ -211,23 +101,14 @@ footer {
   transition: transform 0.2s, background 0.2s;
 }
 
-.switch-button { background: #1a7c4c; }
-.switch-button:hover { background: #0f5d36; transform: translateY(-3px); }
-.switch-button i { color: #ffffff; transition: transform 0.2s; }
+.switch-button { background: var(--green); }
+.switch-button:hover { background: var(--hover-green); transform: translateY(-3px); }
+.switch-button i { color: #ffffff; }
 
-.vocasa-button { background: #26175a; }
-.vocasa-button:hover { background: #3b1f7f; transform: translateY(-3px); }
-.vocasa-button i { color: #ffffff; transition: transform 0.2s; }
+.vocasa-button { background: var(--purple); }
+.vocasa-button:hover { background: var(--hover-purple); transform: translateY(-3px); }
+.vocasa-button i { color: #ffffff; }
 
-/* Animatie voor iconen */
-.switch-button:hover i,
-.vocasa-button:hover i {
-  transform: rotate(15deg) scale(1.2);
-}
-
-/* =====================
-   Responsive
-===================== */
 @media (max-width: 600px) {
   header { padding: 2rem 1rem; min-height: 50vh; }
   header img { max-width: 250px; }
@@ -235,17 +116,15 @@ footer {
   .subtitle { font-size: 4vw; }
   .bio { font-size: 3.5vw; padding: 0.8rem 1rem; max-width: 90%; }
   .feeds a, .switch-button, .vocasa-button { width: 90%; font-size: 1rem; padding: 1rem 1.2rem; }
-  .feeds a img, .platforms a img, .switch-button i, .vocasa-button i { height: 24px; max-width: 24px; }
-  .platforms a { width: 60px; height: 60px; }
+  .feeds a img, .switch-button i, .vocasa-button i { height: 24px; max-width: 24px; }
   .contact-button { font-size: 1rem; padding: 1rem 1.5rem; }
 }
-  </style>
+</style>
 </head>
 <body>
 
 <header>
-  <img src="https://archive.org/download/logo2_1400/logo2_1400.png"
-       alt="Logo van Kroniek van een Kampioenschap, Nederlandse volleybalpodcast">
+  <img src="https://archive.org/download/logo2_1400/logo2_1400.png" alt="Logo van Kroniek van een Kampioenschap">
   <h1>Kroniek van een Kampioenschap</h1>
   <p class="subtitle">Nederlandse eerste en beste volleybalpodcast</p>
   <p class="bio">
@@ -257,16 +136,13 @@ footer {
 <section class="section">
   <h2>Feeds</h2>
   <div class="feeds">
-    <a href="https://podcasts.apple.com/be/podcast/kroniek-van-een-kampioenschap/id1437927489?l=nl"
-       target="_blank" title="Luister op Apple Podcasts">
+    <a href="https://podcasts.apple.com/be/podcast/kroniek-van-een-kampioenschap/id1437927489?l=nl" target="_blank">
       <img src="https://cdn.simpleicons.org/applepodcasts/000000" alt="Apple Podcasts logo"> Apple Podcasts
     </a>
-    <a href="https://open.spotify.com/show/3rP4mEECqTnrvs5GOuVPFt"
-       target="_blank" title="Luister op Spotify">
+    <a href="https://open.spotify.com/show/3rP4mEECqTnrvs5GOuVPFt" target="_blank">
       <img src="https://cdn.simpleicons.org/spotify/000000" alt="Spotify logo"> Spotify
     </a>
-    <a href="https://www.youtube.com/@KroniekvaneenKampioenschap/videos"
-       target="_blank" title="Bekijk ons op YouTube">
+    <a href="https://www.youtube.com/@KroniekvaneenKampioenschap/videos" target="_blank">
       <img src="https://cdn.simpleicons.org/youtube/000000" alt="YouTube logo"> YouTube
     </a>
   </div>
@@ -277,48 +153,40 @@ footer {
 
   <h3>Switch</h3>
   <div class="feeds">
-    <a href="https://www.volleybal.nl/competitie/vereniging/ckl9x5l/heren/3#ranking"
-       target="_blank" class="switch-button">
+    <a href="https://www.volleybal.nl/competitie/vereniging/ckl9x5l/heren/3#ranking" target="_blank" class="switch-button">
       <i class="fas fa-volleyball-ball"></i> Nevobo
     </a>
-    <a href="https://probeersels.nevobo.nl/poulestatistieken/regio-west-h1i-4"
-       target="_blank" class="switch-button">
+    <a href="https://probeersels.nevobo.nl/poulestatistieken/regio-west-h1i-4" target="_blank" class="switch-button">
       <i class="fas fa-chart-line"></i> Probeersels
     </a>
   </div>
 
   <h3>Vocasa</h3>
   <div class="feeds">
-    <a href="https://www.volleybal.nl/competitie/vereniging/ckl9c8t/heren/6#ranking"
-       target="_blank" class="vocasa-button">
+    <a href="https://www.volleybal.nl/competitie/vereniging/ckl9c8t/heren/6#ranking" target="_blank" class="vocasa-button">
       <i class="fas fa-volleyball-ball"></i> Nevobo
     </a>
-    <a href="https://probeersels.nevobo.nl/poulestatistieken/regio-oost-h2e-10"
-       target="_blank" class="vocasa-button">
-      <i class="fas fa-chart-line"></i> Probeersels
+    <a href="https://probeersels.nevobo.nl/poulestatistieken/regio-oost-h2e-10" target="_blank" class="vocasa-button">
+      <i class="fas fa-chart-line"></i> Probeersel
     </a>
   </div>
 </section>
 
 <section class="section">
   <h2>Contact</h2>
-  <a href="mailto:kroniekvaneenkampioenschap@gmail.com"
-     class="contact-button" title="Neem contact met ons op">Mail ons</a>
+  <a href="mailto:kroniekvaneenkampioenschap@gmail.com" class="contact-button">Mail ons</a>
 </section>
 
 <section class="section">
   <h2>Volg ons</h2>
   <div class="platforms">
-    <a href="https://www.instagram.com/kroniekvaneenkampioenschap/"
-       target="_blank" title="Volg ons op Instagram">
+    <a href="https://www.instagram.com/kroniekvaneenkampioenschap/" target="_blank">
       <img src="https://cdn.simpleicons.org/instagram/000000" alt="Instagram logo">
     </a>
-    <a href="https://twitter.com/kroniekkampioen"
-       target="_blank" title="Volg ons op X (voorheen Twitter)">
+    <a href="https://twitter.com/kroniekkampioen" target="_blank">
       <img src="https://cdn.simpleicons.org/x/000000" alt="X (Twitter) logo">
     </a>
-    <a href="https://bsky.app/profile/kroniekkampioen.bsky.social"
-       target="_blank" title="Volg ons op Bluesky">
+    <a href="https://bsky.app/profile/kroniekkampioen.bsky.social" target="_blank">
       <img src="https://cdn.simpleicons.org/bluesky/000000" alt="Bluesky logo">
     </a>
   </div>
