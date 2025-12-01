@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://kroniekvaneenkampioenschap.nl/sitemap.xml
+Sitemap: https://www.kroniekvaneenkampioenschap.nl/sitemap.xml
