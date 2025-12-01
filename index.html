@@ -199,55 +199,66 @@ footer {
   margin-top: 2rem;
 }
 
-/* Responsive */
+/* =====================
+   Competitie buttons
+===================== */
+.switch-button, .vocasa-button {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  justify-content: center;
+  width: 300px;
+  max-width: 90%;
+  padding: 1rem 1.5rem;
+  border-radius: 12px;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1.2rem;
+  color: #ffffff;
+  transition: transform 0.2s, background 0.2s;
+}
+
+.switch-button { background: var(--green); }
+.switch-button:hover { background: #0f5d36; transform: translateY(-3px); }
+
+.vocasa-button { background: var(--purple); }
+.vocasa-button:hover { background: #1a1440; transform: translateY(-3px); }
+
+.switch-button img, .vocasa-button img {
+  width: auto;
+  height: 32px;
+  max-width: 32px;
+}
+
+/* =====================
+   Responsive
+===================== */
 @media (max-width: 600px) {
   header {
     padding: 2rem 1rem;
     min-height: 50vh;
   }
 
-  header img {
-    max-width: 250px;
-  }
+  header img { max-width: 250px; }
 
-  h1 {
-    font-size: 6vw;
-    line-height: 1.2;
-    word-wrap: break-word;
-    overflow-wrap: break-word;
-  }
+  h1 { font-size: 6vw; line-height: 1.2; word-wrap: break-word; overflow-wrap: break-word; }
 
-  .subtitle {
-    font-size: 4vw;
-  }
+  .subtitle { font-size: 4vw; }
+  .bio { font-size: 3.5vw; padding: 0.8rem 1rem; max-width: 90%; }
 
-  .bio {
-    font-size: 3.5vw;
-    padding: 0.8rem 1rem;
-    max-width: 90%;
-  }
-
-  .feeds a {
+  .feeds a, .switch-button, .vocasa-button {
     width: 90%;
     font-size: 1rem;
     padding: 1rem 1.2rem;
   }
 
-  .feeds a img,
-  .platforms a img {
+  .feeds a img, .platforms a img, .switch-button img, .vocasa-button img {
     height: 24px;
     max-width: 24px;
   }
 
-  .platforms a {
-    width: 60px;
-    height: 60px;
-  }
-
-  .contact-button {
-    font-size: 1rem;
-    padding: 1rem 1.5rem;
-  }
+  .platforms a { width: 60px; height: 60px; }
+  .contact-button { font-size: 1rem; padding: 1rem 1.5rem; }
 }
   </style>
 </head>
@@ -278,6 +289,34 @@ footer {
     <a href="https://www.youtube.com/@KroniekvaneenKampioenschap/videos"
        target="_blank" title="Bekijk ons op YouTube">
       <img src="https://cdn.simpleicons.org/youtube/000000" alt="YouTube logo"> YouTube
+    </a>
+  </div>
+</section>
+
+<section class="section">
+  <h2>Stand in de Competitie</h2>
+
+  <h3>Switch</h3>
+  <div class="feeds">
+    <a href="https://www.volleybal.nl/competitie/vereniging/ckl9x5l/heren/3#ranking"
+       target="_blank" class="switch-button" title="Bekijk Switch op Nevobo">
+      <img src="https://cdn.simpleicons.org/nevobo/ffffff" alt="Nevobo logo"> Nevobo
+    </a>
+    <a href="https://probeersels.nevobo.nl/poulestatistieken/regio-west-h1i-4"
+       target="_blank" class="switch-button" title="Bekijk Switch op Probeersels">
+      <img src="https://cdn.simpleicons.org/probeersels/ffffff" alt="Probeersels logo"> Probeersels
+    </a>
+  </div>
+
+  <h6>Vocasa</h6>
+  <div class="feeds">
+    <a href="https://www.volleybal.nl/competitie/vereniging/ckl9c8t/heren/6#ranking"
+       target="_blank" class="vocasa-button" title="Bekijk Vocasa op Nevobo">
+      <img src="https://cdn.simpleicons.org/nevobo/ffffff" alt="Nevobo logo"> Nevobo
+    </a>
+    <a href="https://probeersels.nevobo.nl/poulestatistieken/regio-oost-h2e-10"
+       target="_blank" class="vocasa-button" title="Bekijk Vocasa op Probeersel">
+      <img src="https://cdn.simpleicons.org/probeersels/ffffff" alt="Probeersel logo"> Probeersel
     </a>
   </div>
 </section>
