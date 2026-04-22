@@ -35,12 +35,19 @@
     header img:hover {
       transform: scale(1.05);
     }
-    h1 {
+  h1 {
       margin-top: 1rem;
-      font-size: 3rem;
+      /* Gebruik 'vw' (viewport width) zodat de tekst mee schaalt, 
+         met een 'clamp' om te voorkomen dat het op desktop belachelijk groot wordt 
+         of op mobiel onleesbaar klein. */
+      font-size: clamp(1.8rem, 8vw, 3rem); 
       font-family: 'Montserrat', sans-serif;
       font-weight: 700;
       color: var(--white);
+      word-wrap: break-word;
+      overflow-wrap: break-word;
+      hyphens: auto;
+    }
     }
     h2 {
         border-bottom: 2px solid rgba(255,255,255,0.2);
