@@ -12,6 +12,7 @@
       --white: #ffffff;
       --purple: #26175a;
       --green: #1a7c4c;
+      --gold: #ffcc00;
       --hover-green: #1a7c4c;
     }
     body {
@@ -44,13 +45,14 @@
     h2 {
         border-bottom: 2px solid rgba(255,255,255,0.2);
         padding-bottom: 0.5rem;
-        margin-top: 2rem;
+        margin-top: 3rem;
         font-family: 'Montserrat', sans-serif;
+        text-align: center;
     }
     h3 {
         text-align: center;
         margin-top: 2rem;
-        margin-bottom: 0.5rem;
+        margin-bottom: 1rem;
         color: var(--white);
         font-family: 'Montserrat', sans-serif;
         font-weight: 700;
@@ -77,11 +79,15 @@
       max-width: 900px;
       margin: auto;
     }
+    .spotify-embed {
+        margin: 2rem 0;
+        text-align: center;
+    }
     .feeds {
       display: flex;
-      flex-direction: column;
+      flex-wrap: wrap;
       gap: 1rem;
-      align-items: center;
+      justify-content: center;
       margin-bottom: 1.5rem;
       margin-top: 1rem;
     }
@@ -92,13 +98,13 @@
       justify-content: center;
       background: var(--white);
       color: var(--black);
-      width: 300px;
+      width: 280px;
       max-width: 100%;
-      padding: 1.2rem;
+      padding: 1rem;
       border-radius: 12px;
       text-decoration: none;
       font-weight: bold;
-      font-size: 1.1rem;
+      font-size: 1rem;
       transition: transform 0.2s, background 0.2s, color 0.2s;
     }
     .feeds a img {
@@ -110,8 +116,20 @@
       background: var(--hover-green);
       color: var(--white);
     }
-    .feeds a:hover img, .platforms a:hover img {
+    .feeds a:hover img {
         filter: invert(1);
+    }
+    /* Speciale styling voor de Merchandise knop */
+    .merch-button {
+      background: var(--gold) !important;
+      color: var(--black) !important;
+      border: 2px solid var(--white);
+      font-size: 1.2rem !important;
+      width: 350px !important;
+    }
+    .merch-button:hover {
+      background: var(--black) !important;
+      color: var(--gold) !important;
     }
     .platforms {
       display: flex;
@@ -140,9 +158,12 @@
       transform: translateY(-3px);
       background: var(--hover-green);
     }
+    .platforms a:hover img {
+        filter: invert(1);
+    }
     .contact-container {
         text-align: center;
-        margin-top: 2rem;
+        margin: 2rem 0;
     }
     .contact-button {
       display:inline-block;
@@ -178,16 +199,30 @@
 
   <section class="section">
     <h2>Luister de Podcast</h2>
+    
+    <div class="spotify-embed">
+        <iframe style="border-radius:12px" src="https://open.spotify.com/embed/show/36U4hFjG4HOn8B06O4YtO0?utm_source=generator&theme=0" width="100%" height="152" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+    </div>
+
     <div class="feeds">
       <a href="https://podcasts.apple.com/nl/podcast/kroniek-van-een-kampioenschap/id1437927489" target="_blank">
         <img src="https://cdn.simpleicons.org/applepodcasts/000000" alt="Apple Podcasts"> Apple Podcasts
       </a>
-      <a href="https://open.spotify.com/show/4O7xIAtS2pY257XG5p8fRk" target="_blank">
+      <a href="https://open.spotify.com/show/36U4hFjG4HOn8B06O4YtO0" target="_blank">
         <img src="https://cdn.simpleicons.org/spotify/000000" alt="Spotify"> Spotify
       </a>
       <a href="https://www.youtube.com/@KroniekvaneenKampioenschap/videos" target="_blank">
         <img src="https://cdn.simpleicons.org/youtube/000000" alt="YouTube"> YouTube
       </a>
+    </div>
+  </section>
+
+  <section class="section">
+    <h2>Shop</h2>
+    <div class="feeds">
+        <a href="https://koert.myspreadshop.nl/kroniek+van+een+kampioenschap+2024?idea=66c651a8851398410b609f1e" target="_blank" class="merch-button">
+            👕 Scoor je Merchandise
+        </a>
     </div>
   </section>
 
@@ -229,7 +264,7 @@
   </section>
 
   <footer>
-    <p>© 2026 Kroniek van een Kampioenschap</p>
+    <p>© 2025 Kroniek van een Kampioenschap</p>
   </footer>
 </body>
 </html>
